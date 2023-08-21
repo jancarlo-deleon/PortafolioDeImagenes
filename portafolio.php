@@ -4,7 +4,7 @@
 
 if ($_POST) {
 
-
+    
 
     $nombre = $_POST['nombre'];
     $descripcion = $_POST['descripcion'];
@@ -13,7 +13,7 @@ if ($_POST) {
 
     $imagen_temporal = $_FILES['archivo']['tmp_name'];
 
-    move_uploaded_file($imagen_temporal, "imagenes/" . $imagen);
+    move_uploaded_file($imagen_temporal, "/imagenes/" . $imagen);
 
     $objconexion = new conexion();
     $sql = "INSERT INTO `proyectos` (`idProyecto`, `nombre`, `imagen`, `descripcion`) VALUES (NULL, '$nombre', '$imagen', '$descripcion');";
