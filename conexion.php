@@ -1,15 +1,15 @@
 <?php 
 
     class conexion{
-        private $servidor ="localhost";
-        private  $usuario = "root";
-        private $contrasenia ="";
+        private $servidor ="blz1xdx6iglpd8pvak3l-mysql.services.clever-cloud.com";
+        private  $usuario = "uqdcts5a37wtoi5u";
+        private $contrasenia ="htmOI1ZtcNUc0hXcV3x7";
         private $conexion;
 
         public function __construct(){
 
             try {
-                $this->conexion = new PDO("mysql:host=$this->servidor;dbname=albumcursophp2023",$this->usuario,$this->contrasenia);
+                $this->conexion = new PDO("mysql:host=$this->servidor;dbname=blz1xdx6iglpd8pvak3l",$this->usuario,$this->contrasenia);
                 $this->conexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
             } catch (PDOException $e) {
                 echo "Falla de conexion".$e;
